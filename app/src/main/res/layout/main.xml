@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:id="@+id/main_question_number"
+        android:textSize="20dp"
+        />
+
+    <ScrollView
+        android:id="@+id/main_question_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="300px"
+        android:layout_below="@id/main_question_number"
+        android:scrollbarStyle="outsideOverlay"
+        android:background="@android:drawable/edit_text"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/main_question"
+            android:textSize="20dp"
+            />
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="fill_parent"
+        android:layout_height="500px"
+        android:scrollbarStyle="outsideOverlay"
+        android:background="@android:drawable/edit_text"
+        android:layout_marginTop="14dp"
+        android:layout_below="@+id/main_question_scrollview"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/main_answer"
+            android:hint="正确答案:提交后显示"
+            android:textSize="20dp"
+            />
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="fill_parent"
+        android:layout_height="500px"
+        android:scrollbarStyle="outsideOverlay" android:background="@android:drawable/edit_text"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/scrollView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="请输入您的答案"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:id="@+id/main_useranswer_editText"
+            android:inputType="textPersonName"/>
+    </ScrollView>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="提交"
+        android:id="@+id/main_submit_btn"
+        android:textSize="20dp"
+        android:background="#66CD00"
+        android:layout_marginBottom="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <LinearLayout
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="bottom"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/main_questionslist"
+            android:layout_width="0dp"
+            android:clickable="true"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:text="题目列表"/>
+
+        <TextView
+            android:id="@+id/main_answer_question"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:text="开始答题"/>
+
+        <TextView
+            android:id="@+id/main_user"
+            android:layout_width="0dp"
+            android:clickable="true"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:text="个人中心"/>
+
+    </LinearLayout>
+</RelativeLayout>

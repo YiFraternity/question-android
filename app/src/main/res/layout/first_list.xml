@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 这是范例ListView的布局文件，出了ListView，还可以放置其他控件 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="题目列表"
+        android:background="#2B3439"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"/>
+
+    <ListView
+        android:id="@+id/questionlist"
+        android:layout_width="match_parent"
+        android:layout_height="484dp"
+        android:cacheColorHint="#00000000"
+        android:paddingBottom="5dp"></ListView>
+
+    <LinearLayout
+        android:id="@+id/QAmenu"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="bottom"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/QAquestions"
+            android:layout_width="0dp"
+            android:clickable="true"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:text="题目列表"/>
+
+        <TextView
+            android:id="@+id/QAanswer"
+            android:layout_width="0dp"
+            android:clickable="true"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:text="开始答题"/>
+
+        <TextView
+            android:id="@+id/QAuser"
+            android:layout_width="0dp"
+            android:clickable="true"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:text="个人中心"/>
+
+    </LinearLayout>
+</LinearLayout>
